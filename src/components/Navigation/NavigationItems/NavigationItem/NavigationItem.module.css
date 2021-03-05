@@ -14,7 +14,7 @@
 
 }
 
-.NavigationItem a.active, .NavigationItem:hover a {
+.NavigationItem a .active, .NavigationItem:hover a {
     color: #ffb703;
     text-decoration: line-through;
 }

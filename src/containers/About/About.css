@@ -43,9 +43,14 @@
 /* Personal Profile */
 
 .about__div-container {
-	margin: 40px 0;
+	margin: 40px auto;
+	/* max-width: 740px; */
 	display: flex;
 	flex-direction: column;
+}
+.about__div-container:last-child {
+	margin: 40px auto 0 auto;
+	display: flex;
 }
 
 .about__div-container .description {
@@ -124,4 +129,23 @@
 	display: inline-block;
 	/* background-color: yellowgreen; */
 	background-color: rgb(255, 187, 0);
+}
+
+@media screen and (min-width: 900px) {
+	.about__div-container {
+		flex-direction: row;
+		gap: 50px;
+		margin-bottom: 100px;
+	}
+	.about__div-container .description {
+		order: unset;
+		flex-grow: 2;
+	}
+	
+	.about__div-container .slider {
+		order: unset;
+	}
+	.slider{
+		/* width: 500px; */
+	}
 }

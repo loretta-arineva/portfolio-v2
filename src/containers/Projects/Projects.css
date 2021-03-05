@@ -7,9 +7,70 @@
 
 .project {
 	width: 100%;
-	height: 200px;
+	height: fit-content;
+	text-align: center;
 	margin-top: 25px;
-	background-color: rgba(82, 82, 82, 0.514);
+	display: flex;
+	flex-flow: column;
+	box-shadow: 0px 2px 10px 0px #BCBCBC;;
+}
+
+
+.project__image__container {
+	height: fit-content;
+	position: relative;
+	/* height: 280px; */
+}
+
+.project__image {
+	width: 100%;
+	height: 100%;
+}
+
+.project__stack__container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	gap: 15px;
+	background-color: rgba(0, 0, 0, 0.521);
+	flex-direction: column;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.project:hover .project__stack__container {
+	opacity: 1;
+}
+
+.project__description .project__name {
+	margin: 5px 0;
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+
+.project__stack {
+	background-color: rgb(255, 187, 0);
+	border-radius: 20px;
+	color: rgba(0, 0, 0, 0.781);
+	padding: 5px 15px;
+	height: fit-content;
+	width: fit-content;
+	margin-right: 20px;
+}
+
+.project__stack:hover {
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 187, 0);
+}
+
+.project__grid {
+	display: grid;
+	grid-template-columns: 1fr;
 }
 
 /* > Stack */
@@ -30,4 +91,24 @@
 	display: block;
 	height: 90px;
 	width: 90px;
+}
+
+
+@media screen and (min-width: 600px) {
+	.project__grid {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto;
+		column-gap: 20px;
+	}
+
+	.project__image__container {
+		height: 80%;
+	}
+	
+}
+@media screen and (min-width: 1150px) {
+	.project__grid {
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 20px;
+	}
 }

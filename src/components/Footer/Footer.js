@@ -1,7 +1,8 @@
 import React from 'react';
 
 import classes from './Footer.module.css';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faLinkedinIn, faGithub, faGooglePlusG } from '@fortawesome/free-brands-svg-icons';
 const footer = (props) => {
     return (
         <footer className={classes.Footer}>
@@ -18,9 +19,10 @@ const footer = (props) => {
             </div>
             <div className={classes.social}>
                 <ul>
-                    <li><a href=""><i className="fab fa-github"></i></a></li>
-                    <li><a href=""><i className="fab fa-linkedin-in"></i></a></li>
-                    <li><a href="mailto:loretta.arineva@gmail.com"><i className="fab fa-google-plus-g"></i></a></li>
+                    <li><a href=""><FontAwesomeIcon icon={faGithub} /></a></li>
+                    <li><a href=""><FontAwesomeIcon icon={faLinkedinIn} /></a></li>
+                    <li><a href=""><FontAwesomeIcon icon={faFacebookF} /></a></li>
+                    <li><a href="mailto:loretta.arineva@gmail.com"><FontAwesomeIcon icon={faGooglePlusG} /></a></li>
                 </ul>
             </div>
             <div className={classes.copyright}>

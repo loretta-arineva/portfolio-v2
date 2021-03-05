@@ -1,15 +1,15 @@
 import React from 'react';
 
-import classes from './NavigationItems.module.css';
+// import classes from './NavigationItems.module.css';
 import NavigationItem from './NavigationItem/NavigationItem';
 
 
 const navigationItems = (props) => (
-    <nav className={classes.NavigationItems}>
-        <NavigationItem link="/" active>Home</NavigationItem>
-        <NavigationItem link="/">Projects</NavigationItem>
-        <NavigationItem link="/">About</NavigationItem>
-        <NavigationItem link="/">Contacts</NavigationItem>
+    <nav>
+        <NavigationItem clicked={props.clicked} link="/" active>Home</NavigationItem>
+        <NavigationItem clicked={props.clicked} link="#about">About</NavigationItem>
+        <NavigationItem clicked={props.clicked} link="#projects">Projects</NavigationItem>
+        <NavigationItem clicked={props.clicked} link="#contacts">Contacts</NavigationItem>
     </nav>
 );
 

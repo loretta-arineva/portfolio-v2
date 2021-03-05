@@ -1,5 +1,9 @@
 import React from 'react';
 
+import guessTheNumber from '../../assets/img/Projects/Project-Guess-The-Number.png';
+import dicePigGame from '../../assets/img/Projects/Project-Dice-Pig-Game.png';
+import pricingPanel from '../../assets/img/Projects/Project-Pricing-Panel.png';
+import gothamBlog from '../../assets/img/Projects/Project-Gotham-Blog.png';
 import html from '../../assets/img/stack/html.svg';
 import css from '../../assets/img/stack/css.svg';
 import javascript from '../../assets/img/stack/javascript.svg';
@@ -23,7 +27,60 @@ class Projects extends React.Component {
                     <h3>Projects</h3>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                     <div className="project__grid">
-                        <div className="project"></div>
+                        <div className="project">
+                            <div className="project__image__container">
+                                <img src={guessTheNumber} className="project__image"/>
+                                <div className="project__stack__container">
+                                    <div className="project__stack">HTML5</div>
+                                    <div className="project__stack">CSS3</div>
+                                    <div className="project__stack">Vanilla JavaScript ES6</div>
+                                </div>
+                            </div>
+                            <div className="project__description">
+                                <p className="project__name">Guess The Number</p>
+                            </div>
+                        </div>
+                        <div className="project">
+                            <div className="project__image__container">
+                                <img src={dicePigGame} className="project__image"/>
+                                <div className="project__stack__container">
+                                    <span className="project__stack">HTML5</span>
+                                    <span className="project__stack">CSS3</span>
+                                    <span className="project__stack">MVC</span>
+                                    <span className="project__stack">Vanilla JavaScript ES6</span>
+                                </div>
+                            </div>
+                            <div className="project__description">
+                                <p className="project__name">Dice Pig Game</p>
+                            </div>
+                        </div>
+                        <div className="project">
+                            <div className="project__image__container">
+                                <img src={pricingPanel} className="project__image"/>
+                                <div className="project__stack__container">
+                                    <span className="project__stack">HTML5</span>
+                                    <span className="project__stack">CSS3</span>
+                                    <span className="project__stack">Vanilla JavaScript ES6</span>
+                                    <span className="project__stack">Built from a Photoshop Mockup</span>
+                                </div>
+                            </div>
+                            <div className="project__description">
+                                <p className="project__name">Guess The Number</p>
+                            </div>
+                        </div>
+                        <div className="project">
+                            <div className="project__image__container">
+                                <img src={gothamBlog} className="project__image"/>
+                                <div className="project__stack__container">
+                                    <span className="project__stack">HTML5</span>
+                                    <span className="project__stack">CSS3</span>
+                                    <span className="project__stack">Built from a Photoshop Mockup</span>
+                                </div>
+                            </div>
+                            <div className="project__description">
+                                <p className="project__name">Gotham Blog</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

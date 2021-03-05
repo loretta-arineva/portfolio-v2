@@ -8,7 +8,7 @@ const hero = (props) => {
             <div className={classes.overlay}></div>
             <div className={classes.intro}>
                 <p className={classes.greeting}>H<span className={classes.greeting__sun}>i</span>,</p>
-                <h2>I'm // Loretta //</h2>
+                <h1>I'm // Loretta //</h1>
             </div>
             <div className={classes.scroll__down}>
                 <div className={classes.mouse__scroll}>

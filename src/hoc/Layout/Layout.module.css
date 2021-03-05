@@ -4,5 +4,7 @@
 
 section:not(:first-child) {
 	width: 80%;
-	margin: 50px auto;
+	margin: 0 auto;
+	padding: 60px 0 0 0;
 }
+

@@ -57,7 +57,7 @@
 	top: 2.5px;
 	border-radius: 50%;
 	background: rgb(126,1,1);
-	background:	linear-gradient(5deg, rgba(126,1,1,1) 0%, rgba(255,86,0,1) 44%, rgba(255,242,0,1) 100%);
+	background:	linear-gradient(5deg, rgb(150, 127, 0) 0%, rgb(255, 196, 0) 44%, rgba(255,242,0,1) 100%);
 }
 
 /* ANIMATION */
@@ -159,7 +159,7 @@
 	letter-spacing: 10px;
 	margin-right: -10px;
 	font-family: "Cabin", sans-serif;
-	color: #555;
+	color: rgb(251, 255, 0);
 	animation: nudgeText 5s linear infinite reverse;
 }
 
@@ -200,4 +200,23 @@
 		background-color: #000; 
 		background-position: 0% 100%;
 	}
+}
+
+
+@media screen and (min-width: 440px) {
+	.Hero {
+		background-image: url('../../../assets//img/hero-plant2.jpg');
+		background-position: center;
+		background-size: cover;
+		position: relative;
+	}
+	.Hero .intro {
+		font-size: 2.9rem;
+	}
+	.greeting__sun::after {
+		height: 15px;
+		width: 15px;
+		left: -2px;
+	}
+	
 }
