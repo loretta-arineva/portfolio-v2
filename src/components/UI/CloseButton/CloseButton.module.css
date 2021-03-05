@@ -1,0 +1,50 @@
+.CloseButton {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    height: 50px;
+    width: 50px;
+}
+
+
+.drawer::after, .drawer::before {
+   content: "";
+   background-color: #999;
+   height: 2px;
+   width: 23px;
+   border-radius: 55px;
+   position: absolute;
+}
+
+.drawer::after {
+    left: 12px;
+    top: 25px;
+    transform: rotate(45deg);
+}
+
+.drawer::before {
+   left: 12px;
+   top: 25px;
+   transform: rotate(-45deg);
+}
+
+.CloseButton:hover .drawer::after, .CloseButton:hover .drawer::before {
+    background-color: red;
+}
+
+.CloseButton:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 560px) {
+    .CloseButton {
+        right: 15px;
+        top: 8px;
+    }
+}
+@media (min-width: 1300px) {
+    .CloseButton {
+        right: 25px;
+        top: 15px;
+    }
+}

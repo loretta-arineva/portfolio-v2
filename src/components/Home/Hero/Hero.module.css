@@ -1,0 +1,203 @@
+/* HERO */
+.Hero {
+	position: relative;
+	height: calc(100vh);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 2.2rem;
+	color: #fff;
+	width: 100%;
+	box-sizing: border-box;
+	background-image: url('../../../assets//img/hero-plant.jpg');
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	/* z-index: 10; */
+	background-color: rgba(0, 0, 0, 0.253);
+
+}
+
+.Hero .notice {
+	position: absolute;
+	left: -160px;
+	font-size: 1.3rem;
+	font-family: monospace;
+	/* color: white; */
+	transform: rotate(270deg);
+	background-color: #000;
+}
+
+.intro {
+	text-align: right;
+	letter-spacing: 4.5px;
+	z-index: 9;
+	font-size: 1.7rem;
+}
+
+.greeting__sun {
+	position: relative;
+}
+
+.greeting__sun::after {
+	content: "";
+	height: 10px;
+	width: 10px;
+	position: absolute;
+	left: 0;
+	top: 2.5px;
+	border-radius: 50%;
+	background: rgb(126,1,1);
+	background:	linear-gradient(5deg, rgba(126,1,1,1) 0%, rgba(255,86,0,1) 44%, rgba(255,242,0,1) 100%);
+}
+
+/* ANIMATION */
+
+.sun {
+	position: absolute;
+	top: 30%;
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	background-color: rgba(253, 118, 56, 0.514);
+	animation-name: radiate, pulse;
+	animation-duration: 4s, 4s;
+	animation-delay: 0s, 0s;
+	animation-iteration-count: infinite, infinite;
+}
+
+@keyframes radiate {
+	0% {
+		transform: scale(0);
+	}
+	30% {
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.8;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+/* For reference */
+@keyframes pulse {
+	0% {
+		-moz-box-shadow: 0 0 0 0 rgb(221, 180, 32);
+		box-shadow: 0 0 0 0  rgb(221, 180, 32);
+	}
+	70% {
+		-moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+		box-shadow: 0 0 15px 25px rgba(204,169,44, 0);
+	}
+	100% {
+		-moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+		box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+	  }
+}
+
+/* HERO SCROLL DOWN */
+
+.scroll__down {
+	width: 100px;
+	height: 90px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	bottom: 15px;
+}
+
+.mouse__scroll {
+	width: 34px;
+	height: 59px;
+	border-radius: 100px;
+	position: relative;
+	background-size: 150px 150px;
+	background-image: linear-gradient(transparent 0%, transparent 50%,#000 50%,#000 100%);
+	animation: nudgeMouse 5s ease-out infinite reverse, mouseColor 5s linear infinite;
+}
+
+.mouse__scroll::before {
+	content: "";
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	box-sizing: border-box;
+	width: 30px;
+	height: 55px;
+	border-radius: 100px;
+	background-color: rgb(175, 174, 174);
+
+}
+
+.mouse__wheel {
+	width: 8px;
+	height: 8px;
+	position: absolute;
+	left: calc(50% - 4px);
+	top: 10px;
+	border-radius: 50%;
+	background-color: black;
+	display: inline-block;
+	animation: wheelDown 5s linear infinite;
+}
+
+.scroll__text {
+	font-size: 0.8rem;
+	letter-spacing: 10px;
+	margin-right: -10px;
+	font-family: "Cabin", sans-serif;
+	color: #555;
+	animation: nudgeText 5s linear infinite reverse;
+}
+
+.scroll__text:hover {
+	color: rgba(85, 85, 85, 0.616);
+}
+ @keyframes wheelDown {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	  }
+	  50% {
+		opacity: 0;
+		transform: scale(0.4) translateY(60px);
+	  }
+	 100% {
+		opacity: 1;
+		transform: scale(1);
+	  } 
+}
+
+@keyframes nudgeMouse {
+	0% { transform: translateY(0); }
+	80% { transform: translateY(8px); }
+}
+@keyframes nudgeText {
+	0% { transform: translateY(0); }
+	80% { transform: translateY(8px); }
+}
+
+@keyframes mouseColor {
+	0% { background-position: 0% 100%; }
+	40%, 70% { 
+		background-color: #4e5559; 
+		background-position: 0% 10%;
+	}
+	100% {
+		background-color: #000; 
+		background-position: 0% 100%;
+	}
+}

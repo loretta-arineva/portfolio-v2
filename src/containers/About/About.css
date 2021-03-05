@@ -1,0 +1,127 @@
+/* MAIN SECTIONS */
+.section__intro {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.section__heading {
+	font-size: 2.8rem;
+	font-weight: bold;
+	margin-top: 0;
+}
+
+.section__description {
+	display: flex;
+	align-items: center;
+	font-size: 1.2rem;
+	text-align: center;
+	margin-top: 25px;
+	line-height: 1.2;
+}
+
+.section__description::before, .section__description::after {
+	content: "";
+	width: 50px;
+	display: inline-block;
+	border-bottom: 1px solid black;
+}
+
+.section__description::before {
+	margin-right: 15px;
+}
+.section__description::after {
+	margin-left: 15px;
+}
+
+/* ABOUT SECTION */
+.about__me {
+}
+
+/* Personal Profile */
+
+.about__div-container {
+	margin: 40px 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.about__div-container .description {
+	order: 1;
+}
+
+.about__div-container .slider {
+	order: 2;
+}
+
+.description p {
+	margin-bottom: 20px;
+	text-indent: 15px;
+	line-height: 1.5;
+
+}
+
+.slider {
+	margin: 0 auto;
+	min-height: 150px;
+	height: fit-content;
+	width: 100%;
+	background-color: rgb(116, 116, 116);
+}
+
+.slider:hover {
+	background-color: rgb(255, 220, 65);
+}
+
+.slider img {
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+}
+
+.profile-data__container {
+	position: relative;
+	height: 320px;
+	margin-top: 30px;
+}
+
+.profile__data {
+	width: 200px;
+	height: 200px;
+	background-color: #555;
+}
+
+.profile__description {
+	/* border: 5px solid rgb(43, 158, 224); */
+	/* background-color: rgba(255, 255, 255, 0.486); */
+	background-color: white;
+	border:1px solid black;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	box-sizing: border-box;
+	text-align: center;
+	left: 85px;
+	top: 120px;
+}
+
+.about__div-container h3, .project__div-container h3 {
+	padding-bottom: 25px;
+	margin-bottom: 25px;
+	position: relative;
+}
+.about__div-container h3::after, .project__div-container h3::after {
+	content: "";
+	width: 60px;
+	height: 4px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: inline-block;
+	/* background-color: yellowgreen; */
+	background-color: rgb(255, 187, 0);
+}
