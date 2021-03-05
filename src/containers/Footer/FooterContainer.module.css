@@ -1,0 +1,14 @@
+/* FOOTER */
+.Footer {
+	width: 100%;
+	position: relative;
+	height: fit-content;
+	background-color: rgb(14, 14, 19);
+	box-sizing: border-box;
+    padding: 25px 0 0 0 ;
+}
+
+.Footer a {
+	text-decoration: none;
+	color: white;
+}

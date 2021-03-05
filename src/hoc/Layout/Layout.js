@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 import Main from '../../containers/Main/Main';
 import Aux from '../Aux/Aux';
 import Header from '../../containers/Header/HeaderContainer';
-import Footer from '../../components/Footer/Footer';
+import Footer from '../../containers/Footer/FooterContainer';
 import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
 import classes from './Layout.module.css';
 import heroView from '../../components/Home/Hero/HeroFunction/herFunction';

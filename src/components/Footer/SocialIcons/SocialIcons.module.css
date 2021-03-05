@@ -1,0 +1,37 @@
+.social ul {
+	margin: 20px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social ul li a {
+	display: inline-block;
+}
+
+.social ul li{
+	margin-right: 15px;
+}
+.social ul li:last-child {
+	margin-right: 0;
+}
+
+.social a {
+	font-size: 1.5rem;
+}
+
+.social ul li{
+    margin-right: 25px;
+}
+
+
+@media screen and (min-width: 530px) {
+    .social a {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .social ul li {
+		margin-right: 25px;
+	}
+}

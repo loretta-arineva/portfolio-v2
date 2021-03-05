@@ -1,8 +1,9 @@
 import React from 'react';
 
-import classes from './Footer.module.css';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faLinkedinIn, faGithub, faGooglePlusG } from '@fortawesome/free-brands-svg-icons';
+import classes from './Footer.module.css';
 const footer = (props) => {
     return (
         <footer className={classes.Footer}>
@@ -19,16 +20,13 @@ const footer = (props) => {
             </div>
             <div className={classes.social}>
                 <ul>
-                    <li><a href=""><FontAwesomeIcon icon={faGithub} /></a></li>
+                    {/* <li><a href=""><FontAwesomeIcon icon={faGithub} /></a></li>
                     <li><a href=""><FontAwesomeIcon icon={faLinkedinIn} /></a></li>
                     <li><a href=""><FontAwesomeIcon icon={faFacebookF} /></a></li>
-                    <li><a href="mailto:loretta.arineva@gmail.com"><FontAwesomeIcon icon={faGooglePlusG} /></a></li>
+                    <li><a href="mailto:loretta.arineva@gmail.com"><FontAwesomeIcon icon={faGooglePlusG} /></a></li> */}
                 </ul>
             </div>
-            <div className={classes.copyright}>
-                <div className={classes.empty__footer}></div>
-                <p>Copyright &copy; <span className={classes.current__year}>{props.currentYear}</span> Loreta Krasteva. All Rights Reserved</p>
-            </div>
+            {/* <Copyright currentYear={props.currentYear}/> */}
         </footer>
     );
 };
